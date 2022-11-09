@@ -2,6 +2,8 @@
 
 This repository contains the R scripts to scrape __The Simpsons Transcripts__
 
+Description: [Scraping-The-Simpsons-Transcripts-with-R.pdf](Scraping-The-Simpsons-Transcripts-with-R.pdf)
+
 Source: [Forever Dreaming Transcripts](https://transcripts.foreverdreaming.org/viewforum.php?f=431&start=725)
 
 
