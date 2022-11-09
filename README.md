@@ -1,10 +1,40 @@
 # Scraping The Simpsons Transcripts
 
-This repository contains the R scripts to scrape __The Simpsons Transcripts__
+This repository contains the R scripts to scrape __The Simpsons Transcripts__.
 
-Description: [Scraping-The-Simpsons-Transcripts-with-R.pdf](Scraping-The-Simpsons-Transcripts-with-R.pdf)
 
-Source: [Forever Dreaming Transcripts](https://transcripts.foreverdreaming.org/viewforum.php?f=431&start=725)
+## Source
+
+The source of the data is the [Forever Dreaming Transcripts](https://transcripts.foreverdreaming.org) website.
+
+The source transcript (HTML) files for The Simpsons are available at:
+
+<https://transcripts.foreverdreaming.org/viewforum.php?f=431&start=725>
+
+
+## Description
+
+[Scraping-The-Simpsons-Transcripts-with-R.pdf](Scraping-The-Simpsons-Transcripts-with-R.pdf)
+
+
+## Data Table `simpsons-transcripts.txt`
+
+The ultimate output of the R scripts is the file `simpsons-transcripts.txt`.
+This is a field-separated file in which the field-separator is the caret 
+`"^"` symbol. The content of `simpsons-transcripts.txt` is basically a data 
+table with five columns:
+
+1) `year`: number of year (in which first episode of that season's was aired)
+
+2) `season`: number of season
+
+3) `episode`: number of episode
+
+4) `title`: title of episode
+
+5) `text`: text of transcript
+
+This data set can be used for text mining purposes.
 
 
 ## Filestructure
@@ -12,12 +42,14 @@ Source: [Forever Dreaming Transcripts](https://transcripts.foreverdreaming.org/v
 ```
 README.md
 Scraping-The-Simpsons-Transcripts-with-R.pdf
-script1-scrape-episode-ids.R
-script2-download-episode-html-files.R
-script3-extract-transcript-lines.R
-script4-assemble-output-table.R
-episode-ids.txt
-simpsons-transcripts.txt
+code/
+  script1-scrape-episode-ids.R
+  script2-download-episode-html-files.R
+  script3-extract-transcript-lines.R
+  script4-assemble-output-table.R
+data/
+  episode-ids.txt
+  simpsons-transcripts.txt
 html_files/
 	episode-21861.html
 	episode-21862.html
