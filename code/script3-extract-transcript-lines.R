@@ -63,7 +63,7 @@ remove_empty_lines = function(vec) {
 # Extract text of transcripts
 # -------------------------------------
 
-html_files = dir("html_files/")
+html_files = dir("../html_files/")
 
 # initialize vectors: season, episode, and title
 num_files = length(html_files)
@@ -109,7 +109,7 @@ for (i in seq_along(html_files)) {
   
   # export content to folder "transcript_files/"
   outfile = paste0(
-    "transcript_files/",
+    "../transcript_files/",
     paste0("season-", season_num, "-episode-", episode_num, ".txt")
   )
   writeLines(script_lines, outfile)
@@ -128,4 +128,4 @@ for (i in seq_along(html_files)) {
 #   title = title_vec
 # )
 # 
-# write.csv(titles_dat, file = "episode-titles.csv", row.names = FALSE)
+# write.csv(titles_dat, file = "../episode-titles.csv", row.names = FALSE)

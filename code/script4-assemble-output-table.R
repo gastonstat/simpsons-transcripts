@@ -4,7 +4,7 @@
 # - episode-titles.csv file
 # - episode transcript txt files
 # Output:
-# - assembled field-separated file 
+# - assembled field-separated text file 
 # (caret "^" used as field separator)
 #
 # Author: Gaston Sanchez
@@ -21,7 +21,7 @@ library(tidyverse)
 # and store it into a character vector to be 
 # added as the new column of the assembled table 'dat'
 
-dir_scripts = "transcript_files/"
+dir_scripts = "../transcript_files/"
 txt_files = dir(dir_scripts)
 
 # output vectors
@@ -70,10 +70,10 @@ dat = data.frame(
 )
 
 
-# export it
+# export it to "data/" directory
 write.table(
   x = dat, 
   sep = "^",
-  file = "simpsons-transcripts.txt", 
+  file = "../data/simpsons-transcripts.txt", 
   row.names = FALSE)
 

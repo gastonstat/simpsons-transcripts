@@ -27,7 +27,7 @@ base_url = "https://transcripts.foreverdreaming.org/"
 page_url = "viewforum.php?f=431"
 
 # list of episode id's
-episode_ids = readLines("episode_ids.txt")
+episode_ids = readLines("../data/episode_ids.txt")
 
 # eiposide sub-url
 epi_topic = "viewtopic.php?f=431&t="
@@ -39,7 +39,7 @@ epi_topic = "viewtopic.php?f=431&t="
 # download html files of episodes
 for (epi in seq_along(episode_ids)) {
   epi_url = paste0(base_url, epi_topic, episode_ids[epi])
-  epi_html = paste0("html_files/episode-", episode_ids[epi], ".html")
+  epi_html = paste0("../html_files/episode-", episode_ids[epi], ".html")
   download.file(epi_url, destfile = epi_html)
 
     # random sleep time before next html request

@@ -70,4 +70,4 @@ for (p in seq_along(pages)) {
 
 # export list of episode id's to text file
 epi_ids = str_extract(episode_id_hrefs, "\\d+$")
-writeLines(epi_ids, "episode_ids.txt")
+writeLines(epi_ids, "../data/episode_ids.txt")
