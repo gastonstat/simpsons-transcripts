@@ -1,6 +1,7 @@
 # Scraping The Simpsons Transcripts
 
-This repository contains the R scripts to scrape __The Simpsons Transcripts__.
+This repository contains the R scripts to scrape __The Simpsons Transcripts__, 
+as well as the scraped data files, and the assemled output data file.
 
 
 ## Source
