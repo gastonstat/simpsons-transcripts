@@ -92,13 +92,20 @@ for (i in seq_along(html_files)) {
   title_vec[i] = episode_title
   
   # cleaning raw script lines
-  script_lines = extract_raw_script(html_doc)
-  script_lines = remove_initial_voice_name(script_lines)
-  script_lines = remove_text_in_parenthesis(script_lines)
-  script_lines = remove_text_in_brackets(script_lines)
-  script_lines = remove_any_colon(script_lines)
-  script_lines = remove_empty_lines(script_lines)
+#  script_lines = extract_raw_script(html_doc)
+#  script_lines = remove_initial_voice_name(script_lines)
+#  script_lines = remove_text_in_parenthesis(script_lines)
+#  script_lines = remove_text_in_brackets(script_lines)
+#  script_lines = remove_any_colon(script_lines)
+#  script_lines = remove_empty_lines(script_lines)
   
+  script_lines = extract_raw_script(html_doc) %>%
+    remove_initial_voice_name() %>%
+    remove_text_in_parenthesis() %>%
+    remove_text_in_brackets() %>%
+    remove_any_colon() %>%
+    remove_empty_lines()
+
   # adding back season, episode, and title
   script_lines = c(
     paste0("season: ", season_num), 
